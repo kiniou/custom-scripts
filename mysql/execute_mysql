@@ -10,4 +10,4 @@ then
     echo "    'execute_mysql_my-local' will load my-local.cnf "
     exit 1
 fi
-mysql --defaults-extra-file=~/.mysql/${CFG}.cnf -B glpi_0.83.31 -v -v -v
+mysql --defaults-extra-file=~/.mysql/${CFG}.cnf -B ${1} -v -v -v
