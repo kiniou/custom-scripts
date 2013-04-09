@@ -1,0 +1,13 @@
+#!/bin/sh
+
+CFG=$(echo $(basename $0) | sed -e "s/^execute_mysql_\?//")
+echo ${CFG}
+
+if [ "x${CFG}" = "x" ]
+then
+    echo "use a symbolic link with the config name as a suffix"
+    echo "example:"
+    echo "    'execute_mysql_my-local' will load my-local.cnf "
+    exit 1
+fi
+mysql --defaults-extra-file=~/.mysql/${CFG}.cnf -B glpi_0.83.31 -v -v -v

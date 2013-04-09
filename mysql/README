@@ -1,0 +1,9 @@
+= Mysql Script
+
+== backup_mysql.sh
+
+
+== load_mysql.sh
+
+Requirements:
+* dialog
