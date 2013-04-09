@@ -2,8 +2,15 @@
 
 == backup_mysql.sh
 
+This script is an helper to dump mysql database with an extra config file (cf. my-local.cnf.sample)
+
+The dump will be written as <database>_<year>-<month>-<day>.mysql .
 
 == load_mysql.sh
 
+This script is an helper to load mysql dump with an extra config file (cf. my-local.cnf.sample)
+
 Requirements:
-* dialog
+
+* http://www.ivarch.com/programs/pv.shtml[pv]
+* http://invisible-island.net/dialog/dialog.html[dialog]
